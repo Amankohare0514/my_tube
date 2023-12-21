@@ -31,7 +31,7 @@ const SearchBar = () => {
     >
       <input
         className='search-bar'
-        placeholder='Search your video'
+        placeholder='Search...'
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
