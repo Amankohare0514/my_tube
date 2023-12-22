@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Videos, Sidebar } from "./";
-import { useTheme } from "./ThemeContext"; // Import useTheme hook
+import { useTheme } from "./ThemeContext"; 
 
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
   const [videos, setVideos] = useState(null);
-  const { darkMode } = useTheme(); // Use useTheme hook to access darkMode
+  const { darkMode } = useTheme(); 
 
   useEffect(() => {
     setVideos(null);
@@ -22,7 +22,7 @@ const Feed = () => {
         <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
         
         <Typography className="copyright" variant="body2" sx={{ mt: 1.5, color: darkMode ? "#000" : "#fff" }}>
-          Copyright © 2022 JSM Media
+          Copyright © 2022 snax code
         </Typography>
       </Box>
 
@@ -30,7 +30,6 @@ const Feed = () => {
         <Typography variant="h4" fontWeight="bold" mb={2} sx={{ color: "white" }}>
           {selectedCategory} <span style={{ color: "#FC1503" }}>videos</span>
         </Typography>
-
         <Videos videos={videos} />
       </Box>
     </Stack>
