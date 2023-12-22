@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { Stack, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
 import { logo } from "../utils/constants";
 import SearchBar from "./SearchBar";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import { useTheme } from "./ThemeContext";
+
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const { darkMode, toggleDarkMode } = useTheme();
+
   return (
     <Stack
       direction="row"
@@ -18,7 +18,7 @@ const Navbar = () => {
       sx={{
         position: "sticky",
         background: darkMode ? "#fff" : "#000",
-        color: darkMode ? "#000" : "#fff", // Text color is inverted
+        color: darkMode ? "#000" : "#fff",
         top: 0,
         justifyContent: "space-between",
       }}
