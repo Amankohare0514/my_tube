@@ -1,12 +1,9 @@
 import React from "react";
 import { Stack } from "@mui/material";
-import { useTheme } from "./ThemeContext"; // Import useTheme hook
-
+import { useTheme } from "./ThemeContext"; 
 import { categories } from "../utils/constants";
-
 const Categories = ({ selectedCategory, setSelectedCategory }) => {
-  const { darkMode } = useTheme(); // Use useTheme hook to access darkMode
-
+  const { darkMode } = useTheme(); 
   return (
     <Stack
       direction="row"

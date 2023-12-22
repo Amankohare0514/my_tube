@@ -3,19 +3,15 @@ import { Box, Stack, Typography } from "@mui/material";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Videos, Sidebar } from "./";
 import { useTheme } from "./ThemeContext"; 
-
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
   const [videos, setVideos] = useState(null);
   const { darkMode } = useTheme(); 
-
   useEffect(() => {
     setVideos(null);
-
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
       .then((data) => setVideos(data.items))
   }, [selectedCategory]);
-
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box sx={{ height: { sx: "auto", md: "92vh" }, borderRight: "1px solid #3d3d3d", px: { sx: 0, md: 2 }, backgroundColor: darkMode ? "#fff" : "#000", color: darkMode ? "#fff" : "#000" }}>
@@ -25,7 +21,6 @@ const Feed = () => {
           Copyright © 2022 snax code
         </Typography>
       </Box>
-
       <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2, backgroundColor: darkMode ? "#fff" : "#000", color: darkMode ? "#fff" : "#000" }}>
         <Typography variant="h4" fontWeight="bold" mb={2} sx={{ color: "white" }}>
           {selectedCategory} <span style={{ color: "#FC1503" }}>videos</span>
@@ -35,5 +30,4 @@ const Feed = () => {
     </Stack>
   );
 };
-
 export default Feed;

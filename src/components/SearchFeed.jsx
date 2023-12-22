@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { useTheme } from "./ThemeContext"; 
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Videos } from "./";
-
 const SearchFeed = () => {
   const [videos, setVideos] = useState(null);
   const { searchTerm } = useParams();
@@ -27,5 +26,4 @@ const SearchFeed = () => {
     </Box>
   );
 };
-
 export default SearchFeed;
