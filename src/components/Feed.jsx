@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 
-import { fetchFromAPI } from "../utils/fetchFromApi";
+import { fetchFromAPI } from "../utils/FetchFromApi";
 import { Videos, Sidebar } from "./";
 
 const Feed = () => {
