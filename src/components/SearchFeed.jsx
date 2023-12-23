@@ -15,8 +15,8 @@ const SearchFeed = () => {
   }, [searchTerm]);
 
   return (
-    <Box p={2} minHeight="95vh" sx={{ backgroundColor: darkMode ? "#333" : "#fff", color: darkMode ? "#fff" : "#000" }}>
-      <Typography variant="h4" fontWeight={900} color="white" mb={3} ml={{ sm: "100px" }}>
+    <Box p={2} minHeight="95vh" sx={{ backgroundColor: darkMode ? "#fff" : "#000", color: darkMode ? "#fff" : "#000" }}>
+      <Typography variant="h4" fontWeight={900} color={darkMode ? "#000" : "#fff"} mb={3} ml={{ sm: "100px" }}>
         Search Results for <span style={{ color: "#FC1503" }}>{searchTerm}</span> videos
       </Typography>
       <Box display="flex">

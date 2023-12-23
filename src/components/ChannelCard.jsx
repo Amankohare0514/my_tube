@@ -27,7 +27,6 @@ const ChannelCard = ({ channelDetail, marginTop }) => {
     textAlign: 'center',
     color: darkMode ? "#fff" : "#000",
   });
-
   return (
     <Box
       sx={{
