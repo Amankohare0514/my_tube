@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Typography, Box } from "@mui/material";
 import { useParams } from "react-router-dom";
-import { useTheme } from "./ThemeContext"; 
-import { fetchFromAPI } from "../utils/fetchFromAPI";
+
+import { fetchFromAPI } from "../utils/fetchFromApi";
 import { Videos } from "./";
+
 const SearchFeed = () => {
   const [videos, setVideos] = useState(null);
   const { searchTerm } = useParams();
-  const { darkMode } = useTheme(); 
 
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${searchTerm}`)
@@ -15,15 +15,16 @@ const SearchFeed = () => {
   }, [searchTerm]);
 
   return (
-    <Box p={2} minHeight="95vh" sx={{ backgroundColor: darkMode ? "#fff" : "#000", color: darkMode ? "#fff" : "#000" }}>
-      <Typography variant="h4" fontWeight={900} color={darkMode ? "#000" : "#fff"} mb={3} ml={{ sm: "100px" }}>
+    <Box p={2} minHeight="95vh">
+      <Typography variant="h4" fontWeight={900}  color="white" mb={3} ml={{ sm: "100px"}}>
         Search Results for <span style={{ color: "#FC1503" }}>{searchTerm}</span> videos
       </Typography>
       <Box display="flex">
-        <Box sx={{ mr: { sm: '100px' } }} />
+        <Box sx={{ mr: { sm: '100px' } }}/>
         {<Videos videos={videos} />}
       </Box>
     </Box>
   );
 };
+
 export default SearchFeed;
