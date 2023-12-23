@@ -21,7 +21,7 @@ const Feed = () => {
         <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
         
         <Typography className="copyright" variant="body2" sx={{ mt: 1.5, color: "#fff", }}>
-          Copyright © 2022 aman kohare
+          Copyright © 2022 <a href="https://heyamankohare.vercel.app/"  style={{ color: "#fff" }}>aman kohare</a>
         </Typography>
       </Box>
 
