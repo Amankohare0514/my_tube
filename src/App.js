@@ -8,7 +8,7 @@ const App = () => (
   <BrowserRouter>
     <Box
       sx={{
-        backgroundImage: 'linear-gradient(to right, #2d06f2, #fb173f)',    
+        background: 'linear-gradient(to right, #2d06f2, #fb173f)',    
       }}
     >
       <Navbar />
