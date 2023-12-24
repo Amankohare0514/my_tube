@@ -2,21 +2,9 @@ import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import { logo } from "../utils/constants";
 import { SearchBar } from "./";
-import LoginButton from "../AuthProcess/LoginButton";
-import Profile from "../AuthProcess/Profile";
-import { useState, useEffect } from "react";
+import NewFolder from "../AuthProcess/NewFolder";
 
 const Navbar = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  useEffect(() => {
-    const checkAuthentication = () => {
-      const userIsAuthenticated = true; 
-      setIsAuthenticated(userIsAuthenticated);
-    };
-
-    checkAuthentication();
-  }, []);
 
   return (
     <Stack
@@ -35,11 +23,7 @@ const Navbar = () => {
         <img src={logo} alt="logo" height={45} />
       </Link>
       <SearchBar />
-      {isAuthenticated ? (
-        <Profile />
-      ) : (
-        <LoginButton />
-      )}
+    <NewFolder/>
     </Stack>
   );
 };
