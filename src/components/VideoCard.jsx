@@ -5,7 +5,6 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { demoThumbnailUrl, demoVideoTitle, demoChannelUrl, demoChannelTitle } from '../utils/constants';
 const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsVideoLoaded(true);
@@ -14,12 +13,10 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
   }, []);
 
   return (
-    <Card
-      sx={{
-        width: { xs: '100%', sm: '350px', md: '300px' },
+    <Card sx={{
+        width: { xs: '320px', sm: '358px', md: '300px' },
         boxShadow: '1px 1px 2px black',
-        borderRadius: 4,
-      }}
+        borderRadius: 4,}}
     >
       <Link to={videoId ? `/video/${videoId}` : '/video/cV2gBU6hKfY'}>
         <CardMedia

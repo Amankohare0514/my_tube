@@ -3,7 +3,7 @@ import { Stack, useMediaQuery, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import { logo } from "../utils/constants";
 import NewFolder from "../AuthProcess/BothFolder";
-import DarkModeToggle from "./DarkModeToggle"; // Create DarkModeToggle component
+import DarkModeToggle from "./DarkModeToggle"; 
 import SearchBar from "./SearchBar";
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -39,8 +39,8 @@ const Navbar = () => {
 
   const rightContentStyle = {
     display: "flex",
-    flexDirection:  "row", // Display in a column on mobile, in a row on other devices
-    alignItems: "flex-end", // Center items on mobile, align to the right on other devices
+    flexDirection:  "row", 
+    alignItems: "flex-end", 
     marginLeft:   0,
   };
 
