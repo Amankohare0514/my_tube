@@ -1,7 +1,7 @@
 import React from 'react'
 import Profile from './Profile'
 import LoginButton from './LoginButton'
-const NewFolder = () => {
+const BothFolder = () => {
   return (
     <div>
        <Profile />
@@ -9,4 +9,4 @@ const NewFolder = () => {
     </div>
   )
 }
-export default NewFolder
+export default BothFolder
