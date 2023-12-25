@@ -11,12 +11,9 @@ const LoginButton = () => {
     borderRadius: "50px",
     cursor: "pointer",
   };
-
-  // If the user is already logged in, don't show the button
   if (isAuthenticated) {
     return null;
   }
-
   return (
     <button style={buttonStyle} onClick={() => loginWithRedirect()}>
       <b>Log In</b>

@@ -9,5 +9,4 @@ const NewFolder = () => {
     </div>
   )
 }
-
 export default NewFolder
