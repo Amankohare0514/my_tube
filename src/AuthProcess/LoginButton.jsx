@@ -2,7 +2,7 @@ import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const LoginButton = () => {
-  const { loginWithRedirect } = useAuth0();
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
 
   const buttonStyle = {
     backgroundColor: "red",
@@ -12,7 +12,16 @@ const LoginButton = () => {
     cursor: "pointer",
   };
 
-  return <button style={buttonStyle} onClick={() => loginWithRedirect()}><b>Log In</b></button>;
+  // If the user is already logged in, don't show the button
+  if (isAuthenticated) {
+    return null;
+  }
+
+  return (
+    <button style={buttonStyle} onClick={() => loginWithRedirect()}>
+      <b>Log In</b>
+    </button>
+  );
 };
 
 export default LoginButton;
