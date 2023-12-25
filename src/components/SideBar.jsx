@@ -1,7 +1,6 @@
 import React from "react";
 import { Stack } from "@mui/material";
 import { categories } from "../utils/constants";
-
 const Categories = ({ selectedCategory, setSelectedCategory }) => (
   <Stack
     direction="row"
