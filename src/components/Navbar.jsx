@@ -57,7 +57,7 @@ const Navbar = () => {
         </div>
       )}
       <div style={rightContentStyle}>
-        <DarkModeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+        {/* <DarkModeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} /> */}
         <NewFolder />
       </div>
     </Stack>
